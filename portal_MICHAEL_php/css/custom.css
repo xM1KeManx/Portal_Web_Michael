@@ -1,0 +1,149 @@
+.animated-bg {
+    background: linear-gradient(270deg, #77d710, #ff0055, #621ec7);
+    background-size: 600% 600%;
+    animation: GradientShift 15s ease infinite;
+}
+
+@keyframes GradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.border-glow {
+    border: 4px solid white;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    transition: transform 0.3s;
+}
+
+.border-glow:hover {
+    transform: scale(1.05);
+}
+
+.hero-body-adjusted {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    height: 100%; /* Asegura que el hero-body ocupe la altura completa */
+    padding-top: 0; /* Elimina padding superior por defecto si lo hubiera */
+    padding-bottom: 0; /* Elimina padding inferior por defecto si lo hubiera */
+}
+
+.image-container-hero {
+    margin-top: 2rem; /* Ajusta este valor para mover la imagen más arriba */
+    margin-bottom: 24rem; /* Espacio entre la imagen y el título */
+}
+
+.text-content-hero {
+    margin-top: 4rem !important; /* Ajusta este valor para bajar el texto */
+    text-align: center;
+}
+
+.title-bordered {
+    color: white; /* Color del texto */
+    /* Simula un borde con text-shadow */
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+.subtitle-bordered {
+    color: rgb(255, 0, 0); /* Color del texto */
+    /* Simula un borde con text-shadow */
+    text-shadow:
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+}
+
+.custom-hero-image-size {
+    width: 50px !important;   
+    height: 50px !important;  
+}
+
+/* Efectos suaves para tarjetas de género */
+.box.has-background-link-light:hover,
+.box.has-background-danger-light:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.section .title { /* Aseguramos que solo afecte a los títulos dentro de secciones */
+    margin-top: 3rem; /* Ajusta este valor para bajar el título. Empieza con 3rem y sube o baja si es necesario. */
+}
+
+footer { /* Asumo que tu footer.php envuelve el contenido en una etiqueta <footer> */
+    position: sticky; /* O 'fixed' si quieres que siempre esté visible en la pantalla */
+    bottom: 0;
+    width: 100%;
+    background-color: #a31a1a; /* Un color de fondo para el footer, ajusta según tu diseño */
+    padding: 1rem 0; /* Un poco de padding arriba y abajo */
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Opcional: una pequeña sombra para separarlo del contenido */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+.image img {
+  transition: transform 0.4s ease;
+}
+.image img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos especiales para chistes (humor negro) */
+
+.joke-box {
+  background-color: #000; /* Fondo negro absoluto */
+  border-radius: 15px;
+  color: #000000; /* Texto claro */
+  padding: 2rem;
+  box-shadow: 0 0 25px rgb(0, 0, 0);
+  animation: fadeInUp 1s ease;
+}
+
+
+.joke-box p.title,
+.joke-box p.subtitle {
+  color: #000000;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.joke-box p.subtitle {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.joke-box:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mi-icono {
+  width: 130px !important;  /* Tamaño inicial, ajusta aquí */
+  height: 130px !important;  /* Mantiene proporción */ /* Animación suave si cambias el tamaño */
+}
